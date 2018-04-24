@@ -4,6 +4,12 @@
 
 object XRay extends Build
 {
+	// Server access Error: java.security.cert.CertificateException: No subject alternative DNS name matching code.jquery.com found. url=https://code.jquery.com/jquery-1.3.2.min.js
+	javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
+		new javax.net.ssl.HostnameVerifier() {
+			def verify(hostname: String, sslSession: javax.net.ssl.SSLSession) =
+				 hostname == "code.jquery.com"
+		})
 	lazy val main = Project("sxr", file(".")) settings(
 		name := "sxr",
 		organization in ThisBuild := "org.scala-sbt.sxr",
