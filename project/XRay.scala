@@ -59,7 +59,7 @@ object XRay extends Build
 
 	def dependencies = Seq(
 		"jquery" % "jquery"          % jquery_version          % "js->default" from ("http://code.jquery.com/jquery-" + jquery_version + ".min.js"),
-		"jquery" % "jquery-scrollto" % jquery_scrollto_version % "js->default" from ("http://cdn.jsdelivr.net/jquery.scrollto/" + jquery_scrollto_version + "/jquery.scrollTo.min.js"),
+		"jquery" % "jquery-scrollto" % jquery_scrollto_version % "js->default" from ("https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollto/" + jquery_scrollto_version + "/jquery-scrollto.min.js"),
 		"jquery" % "jquery-qtip"     % jquery_qtip_version     % "js->default" from ("http://qtip2.com/v/" + jquery_qtip_version + "/jquery.qtip.min.js")
 	)
 
